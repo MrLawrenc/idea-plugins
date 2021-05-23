@@ -1,0 +1,46 @@
+<idea-plugin>
+    <id>com.github.lawrenc.plugin.1</id>
+    <name>lawrencPlugin</name>
+    <version>1.0</version>
+    <vendor email="mrliu943903861@163.com" url="https://www.huize.com">hz</vendor>
+
+    <description><![CDATA[
+        我的工程描述，支持html<br>
+        <em>项目描述</em>
+        ]]></description>
+
+    <change-notes><![CDATA[
+        更新日志<br>
+        <em>html标签使用</em>
+        ]]>
+    </change-notes>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <toolWindow id="MarkBook" factoryClass="com.github.lawrenc.window.NoteListWindowFactory" anchor="right"
+                    icon="/img/mark.png"></toolWindow>
+        <themeProvider id="6d3ca619-85e9-4536-a629-4b332da726c5" path="/com/github/lawrenc/dialog/a.theme.json"/>
+    </extensions>
+
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="lmy_id" class="com.github.lawrenc.action.LmyAction" text="通知" description="Test notify">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl L"/>
+        </action>
+        <action id="popupAction_id" class="com.github.lawrenc.action.PopupAction" text="Mark" description="Add a note"
+                icon="/img/mark.png">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
+    </actions>
+
+</idea-plugin>
