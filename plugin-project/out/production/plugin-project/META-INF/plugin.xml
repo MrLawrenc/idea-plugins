@@ -27,6 +27,7 @@
         <!-- Add your extensions here -->
         <toolWindow id="MarkBook" factoryClass="com.github.lawrenc.window.NoteListWindowFactory" anchor="right"
                     icon="/img/mark.png"></toolWindow>
+        <themeProvider id="6d3ca619-85e9-4536-a629-4b332da726c5" path="/com/github/lawrenc/dialog/a.theme.json"/>
     </extensions>
 
 
